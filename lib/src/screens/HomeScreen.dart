@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -15,6 +16,51 @@ class HomeScreen extends StatelessWidget {
           elevation: 0.0,
           centerTitle: true,
           backgroundColor: Colors.white,
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(
+                activeIcon: Icon(
+                  FontAwesomeIcons.home,
+                  color: Color(0xFF459C6D),
+                ),
+                icon: Icon(
+                  FontAwesomeIcons.home,
+                  color: Color(0xFF363636),
+                ),
+                title: Container()),
+            BottomNavigationBarItem(
+                activeIcon: Icon(
+                  FontAwesomeIcons.coffee,
+                  color: Color(0xFF459C6D),
+                ),
+                icon: Icon(
+                  FontAwesomeIcons.coffee,
+                  color: Color(0xFF363636),
+                ),
+                title: Container()),
+            BottomNavigationBarItem(
+                activeIcon: Icon(
+                  FontAwesomeIcons.userAlt,
+                  color: Color(0xFF459C6D),
+                ),
+                icon: Icon(
+                  FontAwesomeIcons.userAlt,
+                  color: Color(0xFF363636),
+                ),
+                title: Container()),
+            BottomNavigationBarItem(
+                activeIcon: Icon(
+                  FontAwesomeIcons.ellipsisH,
+                  color: Color(0xFF459C6D),
+                ),
+                icon: Icon(
+                  FontAwesomeIcons.ellipsisH,
+                  color: Color(0xFF363636),
+                ),
+                title: Container()),
+          ],
         ),
         body: ListView(
           children: <Widget>[
