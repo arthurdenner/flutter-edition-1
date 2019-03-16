@@ -128,6 +128,57 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ))
               ],
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 30),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text('Explore', style: TextStyle(fontSize: 30)),
+                  Text(
+                    'Check out all our services',
+                    style: TextStyle(color: Color(0xFFA1A1A1)),
+                  ),
+                  SizedBox(height: 20)
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 30),
+              height: 120,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                    width: 120,
+                    child: Card(
+                      child: CardBalanceAction(
+                          image: 'images/snack.png', text: 'Our Menu'),
+                    ),
+                  ),
+                  Container(
+                    width: 120,
+                    child: Card(
+                      child: CardBalanceAction(
+                          image: 'images/juice.png', text: 'Merchandise'),
+                    ),
+                  ),
+                  Container(
+                    width: 120,
+                    child: Card(
+                      child: CardBalanceAction(
+                          image: 'images/discount.png', text: 'Promotion'),
+                    ),
+                  ),
+                  Container(
+                    width: 120,
+                    child: Card(
+                      child: CardBalanceAction(
+                          image: 'images/juice.png', text: 'Our Menu'),
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
         ));
@@ -147,6 +198,7 @@ class CardBalanceAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Image.asset(this.image, height: 60, width: 60),
         Text(this.text)
